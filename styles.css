@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     max-width: 1280px;
     background-color: #e9e5e5;
-    ;
+
 }
 
 /* Navigation Start */
@@ -70,6 +70,35 @@ ul.menu {
 }
 
 /* Navigation End */
+/* Popular Categories Start */
+
+.popular-categories {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.category a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #ddd;
+    color: #333;
+    padding: 1.1rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    text-align: center;
+    text-transform: uppercase;
+    height: 20px;
+    transition: .2s;
+}
+
+.category a:hover {
+    background-color: #333;
+    color: #ddd;
+}
 
 /* Latest Ads Start */
 
@@ -131,11 +160,7 @@ ul.menu {
 
 
 
-
-
-
-
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
     nav {
         flex-direction: column;
     }
@@ -147,9 +172,71 @@ ul.menu {
     }
 
     .latest-ads {
+        grid-template-columns: repeat(2, 1fr);
 
+    }
+
+    .popular-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+
+
+@media screen and (max-width:480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .search-nav {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .latest-ads {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+@media screen and (max-width:300px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .search-nav {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    ul.menu li {
+        margin: 15px;
+    }
+
+    .latest-ads {
         grid-template-columns: repeat(1, 1fr);
+    }
 
+    .popular-categories {
+        grid-template-columns: repeat(1, 1fr);
     }
 
 }
